@@ -1,0 +1,68 @@
+<ion-content>
+  <div class="logo" align="center">
+    <img src="../assets/icon/favicon.png">
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1 ion-text class="text-primary" align="center">Bienvenido</h1> 
+      </ion-col>
+    </ion-row>
+    <div class="register" align="center">
+      <ion-col>
+        <span class="register" ion-text color="secondary"align="center">¿Eres nuevo? <a href="#" class="register-here">Regístrate aquí.</a></span>
+      </ion-col>
+    </div>
+    <!--user validation-->
+    <div class="user-login">
+      <form (ngSubmit)="saveData()">
+        <!--user-->
+        <ion-item class="user">
+          <ion-icon name="person" class="user-icon" item-start></ion-icon>
+          <ion-input class="input-user" align="left" formControlName="user" type="text" placeholder="Usuario" required="true">
+          </ion-input>
+        </ion-item>
+        <!--password-->
+        <ion-item class="password">
+              <ion-icon name="key" item-start></ion-icon>
+              <ion-input class="input-pass" align="left" formControlName="password" type="password" placeholder="Contraseña" required="true"></ion-input>
+        </ion-item>
+      </form>
+    </div>
+
+    <div>
+      <ion-row>
+        <ion-col>
+            <ion-checkbox class="check-box" checked></ion-checkbox>
+            <ion-label><p>Recordarme</p></ion-label>
+        </ion-col>
+        <ion-col>
+          <a href="#" class="forgot-pass" text-right ion-text color="secondary">¿Olvidaste tu contraseña?</a>
+        </ion-col>
+      </ion-row>
+      <div>
+        <ion-button type="submit" class="button btn-login" expand="block">
+        Ingresar
+        </ion-button>
+      </div>
+    </div>
+    <div class="divider">
+      <ion-row>
+          <ion-col class="line" size="3"></ion-col>
+          <ion-col>
+            <p>O ingresa por</p>
+          </ion-col>
+          <ion-col class="line" size="3"></ion-col>
+        </ion-row>
+    </div>
+    <div class="social-login">
+      <ion-row>
+          <ion-col class="google-btn" size="2"><img src="../assets/icon/simbolo-de-google.svg"></ion-col>
+          <ion-col class="fb-btn" size="2">
+            <img src="../assets/icon/facebook.svg">
+          </ion-col>
+          <ion-col class="twitter-btn" size="2"><img src="../assets/icon/gorjeo.svg"></ion-col>
+        </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>
